@@ -1,1 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile Card</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#FFFDE7;
+}
+
+/* CARD */
+.card{
+    width:90%;
+    max-width:320px;
+    background:#FCE4EC;
+    border-radius:20px;
+    overflow:hidden;
+    text-align:center;
+    animation: glowCard 4s infinite alternate;
+}
+
+@keyframes glowCard {
+    0%{ box-shadow:0 0 10px #ffb3b3; }
+    50%{ box-shadow:0 0 25px #bff0c6; }
+    100%{ box-shadow:0 0 10px #ffb3b3; }
+}
+
+/* COVER */
+.cover{
+    width:100%;
+    height:35%;
+    background:url('cover.jpg') center/cover;
+}
+
+/* PROFILE */
+.profile-wrapper{
+    position:relative;
+    width:100px;
+    height:100px;
+    margin:-50px auto 10px;
+}
+
+.profile{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    border:5px solid #fff;
+    object-fit:cover;
+    animation: glowProfile 3s infinite alternate;
+}
+
+@keyframes glowProfile {
+    0%{ box-shadow:0 0 8px #ffb3b3; }
+    50%{ box-shadow:0 0 16px #bff0c6; }
+    100%{ box-shadow:0 0 8px #ffb3b3; }
+}
+
+/* MUSIC BUTTON */
+.music-btn{
+    position:absolute;
+    bottom:0;
+    right:-10px;
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background: linear-gradient(135deg, #ff4da6, #ff99cc);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    color:white;
+    cursor:pointer;
+    box-shadow:0 0 10px rgba(255, 77, 166, 0.6);
+    animation:pulseMusic 1.8s infinite;
+}
+
+.music-btn:hover{
+    transform:scale(1.1);
+}
+
+@keyframes pulseMusic{
+    0%{ box-shadow:0 0 8px #ff4da6; }
+    50%{ box-shadow:0 0 18px #ff99cc; }
+    100%{ box-shadow:0 0 8px #ff4da6; }
+}
+
+/* CONTENT */
+.content{
+    padding:15px;
+}
+
+.content h1{
+    font-style: italic;
+    font-weight: bold;
+    color:#e1306c;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.content p{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 13px;
+    color:#444;
+    line-height:1.5;
+}
+
+/* SOCIAL */
+.social{
+    margin-top:15px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.social a{
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:#fff;
+    text-decoration:none;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+/* COLORS */
+.fb{ background:#1877f2; }
+.discord{ background:#5865F2; }
+.tiktok{ background:#000; }
+.telegram{ background:#0088cc; }
+
+/* FREE FIRE ICON */
+.ff{
+    background:#fff;
+}
+
+.ff img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+/* HOVER EFFECT */
+.fb:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #1877f2;
+}
+
+.discord:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #5865F2;
+}
+
+.tiktok:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #00f2ea;
+}
+
+.telegram:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px #0088cc;
+}
+
+.ff:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 15px red;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="cover"></div>
+
+    <div class="profile-wrapper">
+        <img src="profile.jpg" class="profile">
+        <div class="music-btn" id="musicBtn">♬</div>
+    </div>
+
+    <div class="content">
+        <h1>EgoCodex </></h1>
+
+        <p>
+        Coding is my passion 💻 <br>
+        I love creating new things and drinking coffee ☕ <br>
+        My blood group is O+ <br>
+        Always trying to learn and explore 🚀
+        </p>
+
+        <div class="social">
+
+            <!-- Free Fire -->
+            <a href="https://ffshare.garena.com/?region=BD&lang=en&action=friend_invite&inviter_uid=3297731344&version=OB53" class="ff">
+                <img src="fff.jpg">
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/SrabontikaIslam143" class="fb">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Discord (Instagram replaced) -->
+            <a href="DISCORD_LINK_HERE" class="discord">
+                <i class="fab fa-discord"></i>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@srabu1m" class="tiktok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+            <!-- Telegram -->
+            <a href="https://t.me/ALICESRABONTIKA" class="telegram">
+                <i class="fab fa-telegram-plane"></i>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+let music = document.getElementById("bg-music");
+let btn = document.getElementById("musicBtn");
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+    if (!isPlaying) {
+        music.play().catch(()=>{});
+        btn.innerHTML = "❚❚";
+        isPlaying = true;
+    } else {
+        music.pause();
+        btn.innerHTML = "♬";
+        isPlaying = false;
+    }
+});
+</script>
+
+</body>
+</html>
